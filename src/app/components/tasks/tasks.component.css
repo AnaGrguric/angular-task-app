@@ -2,6 +2,10 @@
   text-decoration: line-through;
 }
 
+form {
+  gap: 24px;
+}
+
 .task {
   display: flex;
   justify-content: space-between;
@@ -13,3 +17,6 @@
   width: 200px;
 }
 
+.task p {
+  margin-bottom: 0px;
+}
