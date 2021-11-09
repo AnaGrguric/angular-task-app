@@ -1,0 +1,28 @@
+<div class="tasks">
+  <form (submit)="addTask()">
+    <mat-form-field appearance="fill">
+      <input
+        matInput
+        placeholder="Enter tasks..."
+        type="text"
+        name="inputTask"
+        class="task-input"
+        [(ngModel)]="inputTask"
+      />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add Task</button>
+  </form>
+  <div *ngFor="let item of tasks; let i = index" class="task">
+    <p class="number">{{ i + 1 }}</p>
+    <input
+      type="checkbox"
+      class="example-margin"
+      (click)="toggleDoneTask(i)"
+      [checked]="item.completed"
+    />
+    <p class="task-content {{ item.completed ? 'done' : '' }}">
+      {{ item.content }}
+    </p>
+    <mat-icon (click)="deleteTask(i)" color="red">delete</mat-icon>
+  </div>
+</div>
