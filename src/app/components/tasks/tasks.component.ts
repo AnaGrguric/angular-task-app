@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TaskData } from '../../models/TaskData';
 
 @Component({
-  selector: 'app-todos',
+  selector: 'app-tasks',
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css'],
 })
